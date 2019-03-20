@@ -7,7 +7,7 @@ const server = http.createServer((req,res) =>{
     res.end('hello world.');
 });
 
-server.listen(conf.hostname,() => {
+server.listen(conf.port,conf.hostname,() => {
     const addr = `http://${conf.hostname}:${conf.port}`;
     console.info(`Server started at ${chalk.green(addr)}`);
     
